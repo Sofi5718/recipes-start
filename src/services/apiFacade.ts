@@ -47,7 +47,7 @@ async function addRecipe(newRecipe: Recipe): Promise<Recipe> {
     return fetch(URL, options).then(handleHttpErrors);
 }
 async function deleteRecipe(id: number): Promise<Recipe> {
-    const options = makeOptions("DELETE", null,true);
+    const options = makeOptions("DELETE", null, true);
     return fetch(`${RECIPE_URL}/${id}`, options).then(handleHttpErrors);
 }
 
